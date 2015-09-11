@@ -8,8 +8,9 @@ function fail(next) {
 
 function success(next) {
 
-  return function(result) {
-    next(null, result);
+  // sometimes callbacks take three args
+  return function(result, third) {
+    next(null, result, third);
   }
 
 }

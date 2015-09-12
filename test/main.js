@@ -1,30 +1,5 @@
 import * as depromise from '../src';
 
-describe('depromise#fail', _ => {
-
-  it('should return a function', () => {
-
-    expect(depromise.fail()).to.be.a.function();
-
-  });
-
-  it('returned function should callback with error', done => {
-
-    let error = new Error();
-
-    function callback(err) {
-      expect(err).to.exist();
-      done();
-    }
-
-    let failure = depromise.fail(callback);
-
-    failure(error);
-
-  });
-
-});
-
 describe('depromise#success', () => {
 
   it('should return a function', () => {

@@ -1,11 +1,3 @@
-export function fail(next) {
-
-  return function(err) {
-    next(err);
-  }
-
-}
-
 export function success(next, HAS_MULTIPLE_ARGS) {
 
   // sometimes callbacks take three args

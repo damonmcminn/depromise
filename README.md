@@ -22,7 +22,7 @@ function fnWithCallback(data, next) {
       return result
 
     })
-    .done(onFailure, onSuccess)
+    .done(onSuccess, onFailure)
 
 }
 
@@ -50,7 +50,7 @@ function fnWithCallback(data, next) {
       return [result, 'bar'];
 
     })
-    .done(onFailure, onSuccess)
+    .done(onSuccess, onFailure)
 
 }
 

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel/register --require test/globals --recursive",
-    "postinstall": "npm run compile",
-    "compile": "babel src/index.js -o index.js",
+    "compile": "./node_modules/babel/bin/babel.js src/index.js -o index.js",
+    "prepublish": "npm run compile",
     "watch:test": "nodemon -w src -w test -x 'npm test'"
   },
   "repository": {
@@ -21,9 +21,7 @@
   "homepage": "https://github.com/damonmcminn/depromise#readme",
   "devDependencies": {
     "code": "^1.5.0",
-    "mocha": "^2.3.2"
-  },
-  "dependencies": {
+    "mocha": "^2.3.2",
     "babel": "^5.8.23"
   }
 }
